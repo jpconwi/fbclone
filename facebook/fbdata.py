@@ -4,6 +4,9 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Facebook Clone Backend is Live!"
 def get_db_connection():
     return psycopg2.connect(
         dbname=os.environ.get("DB_NAME"),
